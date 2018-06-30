@@ -7,6 +7,9 @@
     transform: rotate(359deg)
   }
 }
+.c1{
+  margin-right: 10px;
+}
 
 .delete, .modal-close, .is-unselectable, .button, .file, .breadcrumb, .pagination-previous, .pagination-next, .pagination-link, .pagination-ellipsis, .tabs {
   -webkit-touch-callout: none;
