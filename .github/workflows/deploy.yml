@@ -17,11 +17,13 @@ jobs:
 
       - name: Install and Build
         run: |
+          cd vite
           npm install
           npm run build
+          cd ..
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: dist
+          folder: vite/dist
           branch: main # For username.github.io, the build goes here
