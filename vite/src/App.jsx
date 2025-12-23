@@ -16,6 +16,16 @@ import {
   Activity,
   Command,
   FlaskConical,
+  Cloud,
+  Network,
+  GitBranch,
+  Server,
+  ShieldCheck,
+  Workflow,
+  Bot,
+  Timer,
+  Layers,
+  Users,
 } from "lucide-react";
 import {
   FaJava,
@@ -26,8 +36,15 @@ import {
   FaDocker,
   FaGithub,
   FaNodeJs,
-  FaGitAlt,
   FaDrawPolygon,
+  FaGitAlt,
+  FaJira,
+  FaHtml5,
+  FaCss3Alt,
+  FaJsSquare,
+  FaLinux,
+  FaBootstrap,
+  FaCode
 } from "react-icons/fa";
 import {
   SiSpringboot,
@@ -36,7 +53,6 @@ import {
   SiPostman,
   SiIntellijidea,
   SiVsco,
-  SiOracle,
   SiGnubash,
   SiGooglecloud,
   SiMysql,
@@ -44,7 +60,20 @@ import {
   SiJenkins,
   SiMui,
   SiEclipseide,
+  SiOracle,
+  SiKubernetes,
+  SiGithubactions,
+  SiLinux,
+  SiAwslambda,
+  SiAmazonapigateway,
+  SiTypescript,
+  SiTensorflow,
+  SiSelenium,
+  SiApachehadoop,
+  SiSocketdotio,
+  SiHibernate
 } from "react-icons/si";
+import { VscJson } from "react-icons/vsc";
 import { PiStudentFill } from "react-icons/pi";
 
 const App = () => {
@@ -71,8 +100,6 @@ const App = () => {
 
   const HeroVisuals1 = () => (
     <div className="hidden lg:flex flex-col gap-6 w-full max-w-md animate-in fade-in slide-in-from-right duration-1000">
-      {/* OPTION 1: THE LIVE TERMINAL */}
-
       <div
         className={`${
           darkMode
@@ -405,10 +432,49 @@ const App = () => {
     {
       company: "ORACLE",
       techIcons: [
-        <SiOracle className="text-red-600" />,
-        <SiTerraform className="text-purple-500" />,
-        <FaPython className="text-blue-400" />,
-        <FaDocker className="text-blue-500" />,
+        // Cloud & Networking
+        <SiOracle
+          className="text-red-600"
+          title="Oracle Cloud Infrastructure"
+        />,
+        <Cloud className="text-sky-500" title="Cloud Architecture" />,
+        <Network className="text-indigo-500" title="Cloud Networking" />,
+        <ShieldCheck className="text-green-500" title="Cloud Security" />,
+
+        // Infrastructure as Code & CI/CD
+        <SiTerraform className="text-purple-500" title="Terraform / CDKTF" />,
+        <Workflow className="text-orange-500" title="CI/CD Pipelines" />,
+        <GitBranch className="text-pink-500" title="Git & PR Automation" />,
+
+        // Containers & Serverless
+        <FaDocker className="text-blue-500" title="Docker" />,
+        <Server
+          className="text-slate-600"
+          title="OCI Functions / Serverless"
+        />,
+        <SiKubernetes
+          className="text-blue-600"
+          title="Container Orchestration"
+        />,
+
+        // Automation & Scripting
+        <FaPython className="text-blue-400" title="Python Automation" />,
+        <Bot className="text-teal-500" title="Automation Bots" />,
+        <Timer className="text-yellow-500" title="Schedulers & Cron Jobs" />,
+        <VscJson className="text-gray-100" title="JSON Validation" />,
+
+        // Frontend & Validation Tools
+        <FaHtml5 className="text-orange-600" title="HTML5" />,
+        <FaCss3Alt className="text-blue-500" title="CSS3" />,
+        <FaJsSquare className="text-yellow-400" title="JavaScript" />,
+
+        // Tooling & Collaboration
+        <FaJira className="text-blue-600" title="Jira Automation" />,
+        <FaDrawPolygon
+          className="text-orange-500"
+          title="Architecture Diagrams"
+        />,
+        <SiLinux className="text-black" title="Linux" />,
       ],
       roles: [
         {
@@ -419,12 +485,12 @@ const App = () => {
         {
           title: "Software Developer 2 (IC2)",
           date: "Mar 2023 - Sep 2024",
-          color: "text-blue-400",
+          color: "text-orange-400",
         },
         {
           title: "Associate Senior Software Developer (IC1)",
           date: "Oct 2022 - Feb 2023",
-          color: "text-slate-400",
+          color: "text-blue-400",
         },
       ],
       description: [
@@ -445,10 +511,41 @@ const App = () => {
     {
       company: "CERNER CORPORATION",
       techIcons: [
-        <FaAws className="text-orange-400" />,
-        <SiAmazondynamodb className="text-blue-600" />,
-        <SiSpringboot className="text-green-500" />,
-        <FaNodeJs className="text-green-600" />,
+        // AWS & Cloud Scale
+        <FaAws className="text-orange-400" title="AWS" />,
+        <Cloud className="text-sky-500" title="Cloud Engineering" />,
+        <Users className="text-indigo-500" title="Multi-Account Management" />,
+
+        // Infrastructure as Code & Automation
+        <Layers className="text-purple-500" title="Infrastructure as Code" />,
+        <Workflow className="text-orange-500" title="Automation Pipelines" />,
+
+        // CI/CD & GitOps
+        <SiGithubactions className="text-gray-800" title="GitHub Actions" />,
+        <GitBranch
+          className="text-pink-500"
+          title="PR Workflows & Auto Merge"
+        />,
+        <FaGitAlt className="text-red-500" title="Git" />,
+
+        // Backend & Serverless
+        <SiAwslambda className="text-orange-500" title="AWS Lambda" />,
+        <Server className="text-slate-600" title="Serverless Architecture" />,
+        <SiAmazonapigateway className="text-blue-600" title="API Gateway" />,
+        <SiAmazondynamodb className="text-blue-600" title="DynamoDB" />,
+        <FaPython className="text-blue-400" title="Python" />,
+
+        // Application & UI
+        <FaNodeJs className="text-green-600" title="Node.js" />,
+        <FaReact className="text-cyan-400" title="React" />,
+        <SiTypescript className="text-blue-500" title="TypeScript" />,
+        <SiSpringboot className="text-green-500" title="Spring Boot" />,
+
+        // Security & Governance
+        <ShieldCheck
+          className="text-green-500"
+          title="Security & Compliance"
+        />,
       ],
       roles: [
         {
@@ -572,49 +669,133 @@ const App = () => {
   ];
 
   const projects = [
+
     {
-      title: "Vehicle Repossessed System",
-      field: "Enterprise Architecture",
-      metrics: "2M+ Records Managed",
+      title: "Handwritten Digit Recognition",
+      field: "Machine Learning & Deep Learning",
+      duration: "Mar 2025",
+      metrics: "98% CNN Accuracy",
+      github: "https://github.com/tc18/cnn_ai",
+      tech: [
+        <FaPython className="text-blue-400" />,
+        <SiTensorflow className="text-orange-500" />,
+        <Cpu className="text-purple-500" />,
+        <Database className="text-slate-400" />,
+      ],
+      desc: "Built multiple digit classification models using MNIST dataset. Implemented Random Forest with Hadoop MapReduce and a CNN-based classifier using TensorFlow. Trained on 60,000 images and evaluated on 10,000 test samples to compare classical ML vs deep learning approaches.",
+    },
+
+    {
+      title: "Photobooth",
+      field: "Full-Stack Web Application",
+      duration: "2021",
+      metrics: "Instagram-Style Media Platform",
+      github: "https://github.com/tc18/Photobooth",
+      tech: [
+        <SiSpringboot className="text-green-500" />,
+        <FaReact className="text-cyan-400" />,
+        <SiMysql className="text-blue-500" />,
+        <FaDocker className="text-blue-500" />,
+      ],
+      desc: "Built an Instagram-like photo sharing application using Spring Boot and React.js with Material UI. Implemented RESTful APIs, image uploads, user feeds, and persistence with MySQL, all containerized using Docker for consistent local and production deployments.",
+    },
+
+    {
+      title: "Repossessed Vehicle Management System",
+      field: "Enterprise Web Systems",
+      duration: "Jun 2015 - Jul 2017",
+      metrics: "1-2M Records Processed",
+      github: "https://github.com/tc18/PoniyaAgencyBank",
       tech: [
         <FaJava className="text-orange-500" />,
         <SiMysql className="text-blue-500" />,
         <SiSpringboot className="text-green-500" />,
+        <FaLinux className="text-black" />,
       ],
-      desc: "Architected a high-concurrency database system for vehicle recovery management. Optimized SQL queries to handle rapid retrieval of legal records across millions of rows.",
+      desc: "Designed and deployed a production-grade web application for repossession agencies. Built large-scale data ingestion pipelines for ambiguous bank Excel files, optimized SQL queries, generated structured PDF reports, and implemented role-based access control. Successfully deployed on a Linux server and used by real clients.",
     },
+
     {
-      title: "Digit Recognition System",
-      field: "AI & Deep Learning",
-      metrics: "98% CNN Accuracy",
+      title: "Find My Spot - Real-Time Parking Allocation",
+      field: "Algorithms & Full-Stack Development",
+      duration: "Jan 2017 - May 2017",
+      metrics: "Dijkstra-Based Navigation",
+      github: "https://github.com/tc18/Find-My-Spot",
       tech: [
-        <FaPython className="text-blue-400" />,
-        <Cpu className="text-purple-500" />,
-        <Database className="text-slate-400" />,
-      ],
-      desc: "Implemented a deep learning pipeline using Convolutional Neural Networks (CNN). Explored distributed data processing to compare local vs. cluster training performance.",
-    },
-    {
-      title: "Find My Spot Navigation",
-      field: "Algorithms / UI",
-      metrics: "Dijkstra Integration",
-      tech: [
+        <FaJava className="text-orange-500" />,
+        <FaReact className="text-cyan-400" />,
         <Globe className="text-blue-400" />,
         <Code2 className="text-green-400" />,
-        <FaReact className="text-cyan-400" />,
       ],
-      desc: "A real-time parking navigation engine using shortest-path algorithms and custom SVG mapping to guide users to vacant spots.",
+      desc: "Developed a real-time parking navigation system using Dijkstra’s shortest path algorithm. Integrated GeoLocation API, dynamic SVG rendering, and backend data sources to guide users to the nearest available parking spot on a campus map.",
     },
+
     {
-      title: "Cloud Account Vending",
-      field: "DevOps Infrastructure",
-      metrics: "500+ AWS Accounts",
+      title: "LinkedIn Automation Scraper",
+      field: "Automation & Web Scraping",
+      duration: "Sep 2017 - Oct 2017",
+      metrics: "Profile & Job Data Extraction",
       tech: [
-        <FaAws className="text-orange-400" />,
-        <SiTerraform className="text-purple-500" />,
         <FaPython className="text-blue-400" />,
+        <SiSelenium className="text-green-500" />,
       ],
-      desc: "Designed an automated 'Account Factory' that provisions secured cloud accounts with pre-configured networking and IAM guardrails.",
+      desc: "Developed a Selenium-based automation bot to log in to LinkedIn, extract user profile data, job listings, and save structured outputs into Excel files for offline analysis.",
+    },
+
+    {
+      title: "Real-Time Chat Application ",
+      field: "Computer Networks",
+      duration: "Oct 2017 - Dec 2017",
+      metrics: "Client-Server Socket Programming",
+      github: "https://github.com/tc18/WebsocketChat",
+      tech: [
+        <FaPython className="text-blue-400" />,
+        <Server className="text-slate-600" />,
+      ],
+      desc: "Built a Python-based socket programming application enabling file transfer and bidirectional chat communication between a server and a single client.",
+    },
+
+    {
+      title: "Online Workspace & Compiler",
+      field: "Web Platforms",
+      duration: "Oct 2017 - Dec 2017",
+      metrics: "Online Compile & Debug",
+      tech: [
+        <FaJava className="text-orange-500" />,
+        <SiMysql className="text-blue-500" />,
+        <FaJsSquare className="text-yellow-400" />,
+      ],
+      desc: "Contributed to an online IDE platform allowing users to create projects, write code, compile, execute, and download source files. Implemented AJAX-driven workflows and file I/O operations.",
+    },
+
+    {
+      title: "eCommerce Platform - Clothing & Items",
+      field: "Full-Stack Web Development",
+      duration: "2016",
+      metrics: "MVC-Based Online Store",
+      github: "https://github.com/tc18/eCommerce/tree/master",
+      tech: [
+        <FaJava className="text-orange-500" />,
+        <SiMysql className="text-blue-500" />,
+        <SiHibernate className="text-yellow-500" />,
+        <Code2 className="text-green-500" />,
+      ],
+      desc: "Developed a full-featured eCommerce web application for clothing and merchandise using J2EE (JSP, JSTL) with Hibernate ORM and MySQL. Implemented a layered MVC architecture with Controllers, DAO, Filters, and Value Objects (VO) to handle product listings, user sessions, cart management, and order processing.",
+    },
+
+    {
+      title: "Technosparx Festival Website",
+      field: "Web Development",
+      duration: "Jan 2015 - Feb 2015",
+      metrics: "Event Registration Platform",
+      github: "https://github.com/tc18/Technospark-15",
+      tech: [
+        <FaJava className="text-orange-500" />,
+        <FaHtml5 className="text-orange-600" />,
+        <FaCss3Alt className="text-blue-500" />,
+        <FaBootstrap className="text-purple-600" />,
+      ],
+      desc: "Built a responsive website for a college technical festival featuring event listings, online registrations, and payment integration, optimized for mobile and tablet devices.",
     },
   ];
 
@@ -676,9 +857,9 @@ const App = () => {
               <Moon size={18} className="text-slate-900" />
             )}
           </button>
-          <button className="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded-lg text-[10px] font-black tracking-widest flex items-center gap-2 transition-all">
+          {/* <button className="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded-lg text-[10px] font-black tracking-widest flex items-center gap-2 transition-all">
             <Download size={14} /> DOWNLOAD_CV
-          </button>
+          </button> */}
         </div>
       </nav>
 
@@ -789,6 +970,9 @@ const App = () => {
                   <span className="text-[9px] font-black text-blue-500 uppercase tracking-widest">
                     {p.field}
                   </span>
+                  <span className="text-[10px] font-mono opacity-40">
+                    {p.duration}
+                  </span>
                 </div>
                 <h4 className={`text-3xl font-black mb-4 ${textColor}`}>
                   {p.title}
@@ -798,13 +982,32 @@ const App = () => {
                 >
                   "{p.desc}"
                 </p>
-                <div className="flex items-center gap-2">
-                  <Activity size={14} className="text-blue-500" />
-                  <span
-                    className={`text-[10px] font-black uppercase ${textColor}`}
-                  >
-                    {p.metrics}
-                  </span>
+                <div className="flex items-center w-full">
+                  <div className="flex items-center gap-2">
+                    <Activity size={14} className="text-blue-500" />
+                    <span
+                      className={`text-[10px] font-black uppercase ${textColor}`}
+                    >
+                      {p.metrics}
+                    </span>
+
+                      {p.github && (
+                        <a
+                        href={p.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="ml-auto group/btn relative flex  opacity-40 hover:opacity-80 items-center gap-2 px-3 py-1.5 bg-white/5 border border-white/10 rounded-full hover:border-blue-500/50 hover:bg-blue-500/5 transition-all"
+                      >
+                        <div className="flex items-center gap-1.5">
+                          <span className="text-green-500 font-bold text-[10px]"><FaCode /></span>
+                          <span className={`text-[10px] font-mono uppercase tracking-wider ${textColor} group-hover/btn:text-blue-400`}>
+                            view_source
+                          </span>
+                        </div>
+                        <FaGithub size={12} className="opacity-40 group-hover/btn:opacity-100 group-hover/btn:text-blue-400" />
+                      </a>
+                      )}
+                  </div>
                 </div>
               </div>
             ))}
