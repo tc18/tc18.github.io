@@ -44,7 +44,8 @@ import {
   FaJsSquare,
   FaLinux,
   FaBootstrap,
-  FaCode
+  FaCode,
+  FaTools
 } from "react-icons/fa";
 import {
   SiSpringboot,
@@ -71,7 +72,11 @@ import {
   SiSelenium,
   SiApachehadoop,
   SiSocketdotio,
-  SiHibernate
+  SiHibernate,
+  SiOllama,
+  SiLangchain,
+  // SiLanggraph, 
+  SiFastapi
 } from "react-icons/si";
 import { VscJson } from "react-icons/vsc";
 import { PiStudentFill } from "react-icons/pi";
@@ -669,6 +674,35 @@ const App = () => {
   ];
 
   const projects = [
+
+    {
+      title: "LangGraph-Multi-Agent-Orchestrator",
+      field: "AI, RAG, Langchain, Langgraph, agent, tools, FastAPI",
+      duration: "Mar 2026",
+      metrics: "Architecturing graph and agentic workflows.",
+      github: "https://github.com/tc18/LangGraph-Multi-Agent-Orchestrator",
+      tech: [
+        <SiLangchain className="text-green-400" />,
+        // <SiLanggraph className="text-orange-500" />,
+        <SiOllama className="text-red-500" />,
+      ],
+      desc: "A research and network troubleshooting assistant built with FastAPI, LangGraph, and Ollama. This project uses a 'Supervisor' architecture to intelligently route tasks between specialized agents (Math, Network, and RAG Research) while streaming real-time updates to the frontend.",
+    },
+
+
+    {
+      title: "RAG-serach-chomaDB",
+      field: "AI, RAG, Tools, FastAPI",
+      duration: "Mar 2026",
+      metrics: "Learning RAG and VectorDB",
+      github: "https://github.com/tc18/RAG-serach-chomaDB",
+      tech: [
+        <SiFastapi className="text-blue-400" />,
+        <FaTools className="text-orange-500" />,
+        <SiOllama className="text-red-500" />,
+      ],
+      desc: "Created a test project that can read docs, stores in vectorDB(ChomaDB) and users can ask questions",
+    },
 
     {
       title: "Handwritten Digit Recognition",
