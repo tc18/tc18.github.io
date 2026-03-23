@@ -76,7 +76,8 @@ import {
   SiOllama,
   SiLangchain,
   // SiLanggraph, 
-  SiFastapi
+  SiFastapi,
+  SiSlack
 } from "react-icons/si";
 import { VscJson } from "react-icons/vsc";
 import { PiStudentFill } from "react-icons/pi";
@@ -702,6 +703,21 @@ const App = () => {
         <SiOllama className="text-red-500" />,
       ],
       desc: "Created a test project that can read docs, stores in vectorDB(ChomaDB) and users can ask questions",
+    },
+
+
+    {
+      title: "slack-mcp-bot",
+      field: "AI, Tools, FastAPI",
+      duration: "Mar 2026",
+      metrics: "Learning Tools and FastAPI with Slack Bot",
+      github: "https://github.com/tc18/slack-mcp-bot",
+      tech: [
+        <SiFastapi className="text-blue-400" />,
+        <FaTools className="text-orange-500" />,
+        <SiSlack className="text-purple-500" />,
+      ],
+      desc: "MCP server with FastAPI and tools, connected via Slack Bot",
     },
 
     {
